@@ -9,7 +9,7 @@ import pyperclip
 import re
 from bs4 import BeautifulSoup
 
-# you don't have to touch this, but you can edit it, just don't leave it blank, it will break
+# you don't have to touch this, but you can edit it, just don't leave it blank, it's not gonna work
 user_agent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
 
 
@@ -20,9 +20,6 @@ def clear_screen():  # Clear Screen
         os.system("clear")
     else:
         return
-
-
-# clear_screen()
 
 
 def character_2k(text):  # See If CopyPasta Have Over 2,000 Characters
@@ -54,7 +51,6 @@ def CopyPastaText_Com(search_input):  # Search CopyPasta On Site "https://copypa
         soup = BeautifulSoup(page.content, "html.parser")
 
         site_title = soup.find_all("h2", class_="blog-entry-title entry-title")  # Find CopyPasta Title
-        # site_content = soup.find_all("code")  # Find CopyPasta Content
         site_content = soup.find_all("div", class_="excerpt-wrap entry-summary")  # Find CopyPasta Content
         site_page_number = soup.find("ul", class_="page-numbers")  # Find Page Number
 
